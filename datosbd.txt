@@ -1,0 +1,67 @@
+insert into estado value('1','Aguascalientes');
+insert into estado value('2','Baja California');
+insert into estado value('3','Baja California Sur');
+insert into estado value('4','Campeche');
+insert into estado value('5','Chiapas');
+insert into estado value('6','Chihuahua');
+insert into estado value('7','Coahuila');
+insert into estado value('8','Colima');
+insert into estado value('9','Ciudad de México');
+insert into estado value('10','Durango');
+insert into estado value('11','Guanajuato');
+insert into estado value('12','Guerrero');
+insert into estado value('13','Hidalgo');
+insert into estado value('14','Jalisco');
+insert into estado value('15','México');
+insert into estado value('16','Michoacán');
+insert into estado value('17','Morelos');
+insert into estado value('18','Nayarit');
+insert into estado value('19','Nuevo León');
+insert into estado value('20','Oaxaca');
+insert into estado value('21','Puebla');
+insert into estado value('22','Querétaro');
+insert into estado value('23','Quintana Roo');
+insert into estado value('24','San Luis Potosí');
+insert into estado value('25','Sinaloa');
+insert into estado value('26','Sonora');
+insert into estado value('27','Tabasco');
+insert into estado value('28','Tamaulipas');
+insert into estado value('29','Tlaxcala');
+insert into estado value('30','Veracruz');
+insert into estado value('31','Yucatán');
+insert into estado value('32','Zacatecas');
+
+
+
+
+
+
+insert into tipo_sangre value('1','A+');
+insert into tipo_sangre value('2','A-');
+insert into tipo_sangre value('3','B+');
+insert into tipo_sangre value('4','B-');
+insert into tipo_sangre value('5','AB+');
+insert into tipo_sangre value('6','AB-');
+insert into tipo_sangre value('7','O+');
+insert into tipo_sangre value('8','O-');
+
+
+
+insert into civil value('1','Casado');
+insert into civil value('2','Divorciado');
+insert into civil value('3','Soltero');
+insert into civil value('4','Union Libre');
+insert into civil value('5','Viudo');
+
+
+insert into proyecto value('1','Encargado de proyecto');
+insert into proyecto value('2','Lider');
+
+
+insert into parentesco value('1','Padre');
+insert into parentesco value('2','Madre');
+insert into parentesco value('3','Hermano');
+insert into parentesco value('4','Conyuge');
+insert into parentesco value('5','Cuñado');
+insert into parentesco value('6','Tio');
+insert into parentesco value('7','Hijo');

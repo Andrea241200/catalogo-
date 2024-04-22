@@ -1,0 +1,89 @@
+create TABLE Puesto(
+id_puesto varchar(2) not null, 
+puesto varchar(30) not null,
+    CONSTRAINT PK_id_puesto PRIMARY KEY(id_puesto)
+);
+
+create TABLE Proyecto(
+id_proyecto varchar(30) not null, 
+nombre_p varchar(50) not null,
+empresa varchar(30) not null,
+f_inicio date not null,
+f_termino date not null,
+    CONSTRAINT PK_id_proyecto PRIMARY KEY(id_proyecto)
+);
+
+create TABLE Estado(
+id_estado varchar(2) not null, 
+estado varchar(30) not null,
+    CONSTRAINT PK_id_estado PRIMARY KEY(id_estado)
+);
+
+create TABLE Civil(
+id_civil varchar(2) not null, 
+estado_civil varchar(20) not null,
+    CONSTRAINT PK_id_civil PRIMARY KEY(id_civil)
+);
+
+create TABLE Tipo_sangre (
+tipo varchar(2) not null, 
+valor varchar(4) not null,
+    CONSTRAINT PK_tipo PRIMARY KEY(tipo)
+);
+
+create TABLE Parentesco (
+id_parentesco varchar(2) not null, 
+parentesco varchar(20) not null,
+    CONSTRAINT PK_id_parentesco PRIMARY KEY(id_parentesco)
+);
+
+
+
+create TABLE Datos_empleado (
+folio varchar(10) not null, 
+nombre varchar(30) not null,
+apellidos varchar(60) not null, 
+f_nacimiento date not null,
+genero varchar(2) not null, 
+rfc varchar(13) not null,
+curp varchar(18) not null, 
+puesto varchar(2) not null,
+foto blob not null,
+direccion varchar(100) not null, 
+ciudad varchar(30) not null,
+estado varchar(2) not null, 
+civil varchar(2) not null,
+telefono1 varchar(10) not null, 
+telefono2 varchar(13),
+tipo_sangre varchar(2) not null, 
+enfremedad varchar(200) not null,
+alergia varchar(200) not null,
+    CONSTRAINT PK_folio PRIMARY KEY(folio),
+    CONSTRAINT FK_id_puesto FOREIGN KEY(puesto) REFERENCES puesto(id_puesto),
+    CONSTRAINT FK_id_estado FOREIGN KEY(estado) REFERENCES estado(id_estado),
+    CONSTRAINT FK_id_civil FOREIGN KEY(civil) REFERENCES civil(id_civil),
+    CONSTRAINT FK_tipo FOREIGN KEY(tipo_sangre) REFERENCES tipo_sangre(tipo)
+);
+
+
+create TABLE Proyecto_empl (
+id_proyecto varchar(30) not null, 
+folio varchar(10),
+    CONSTRAINT FK_id_proyect FOREIGN KEY(id_proyecto) REFERENCES proyecto(id_proyecto),
+    CONSTRAINT FK_folio FOREIGN KEY(folio) REFERENCES datos_empleado(folio)
+);
+
+
+CREATE TABLE Contactos(
+num_contacto varchar(10) not null,
+nombre varchar(30) not null,
+correo varchar(50) not null,
+telefono varchar(10) not null,
+parentesco varchar(2) not null,
+folio varchar(10) not null,
+    CONSTRAINT PK_num_contacto PRIMARY KEY(num_contacto),
+    CONSTRAINT FK_id_parentesco FOREIGN KEY(parentesco) REFERENCES parentesco(id_parentesco),
+    CONSTRAINT FK_folioc FOREIGN KEY(folio) REFERENCES datos_empleado(folio)
+);
+
+
