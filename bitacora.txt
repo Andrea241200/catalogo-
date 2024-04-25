@@ -1,0 +1,38 @@
+
+--
+-- Base de datos: `login_register_mc`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `bitacora`
+--
+
+CREATE TABLE `bitacora` (
+  `Id` int(11) NOT NULL,
+  `nombre_completo` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `Usuario` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `Accion` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `Fecha_Hora` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `bitacora`
+--
+
+INSERT INTO `bitacora` (`Id`, `nombre_completo`, `Usuario`, `Accion`, `Fecha_Hora`) VALUES
+(41, 'Andrea Sanchez ', 'an-sa-ra@outlook.com', 'Inicio de sesion', '2024-02-15 14:06:21'),
+(42, 'Andrea Sanchez ', 'an-sa-ra@outlook.com', 'Inicio de sesion', '2024-02-15 14:17:45'),
+(43, 'Andrea Sanchez ', 'an-sa-ra@outlook.com', 'Inicio de sesion', '2024-02-15 14:51:45'),
+
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `bitacora`
+--
+ALTER TABLE `bitacora`
+  ADD PRIMARY KEY (`Id`);
